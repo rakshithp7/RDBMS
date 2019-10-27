@@ -2,6 +2,11 @@ body {
     background-color: #ecebeb !important;
 }
 
+.vl {
+    border-left: 3px solid grey;
+    height: 500px;
+}
+
 /* NAVBAR */
 
 .navbar {
@@ -17,6 +22,10 @@ body {
 
 /* BOOKING */
 
+#booking-image {
+    width: 100%;
+    height: 50vh;
+}
 .booking {
     margin-top: 100px;
     margin-bottom: 50px;
@@ -28,7 +37,12 @@ body {
     padding-bottom: 20px;
 }
 
+/* PROFILE */
 
+.profile {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
 /* CAROUSEL */
 
 .carousel-item {

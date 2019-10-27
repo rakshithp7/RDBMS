@@ -10,14 +10,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Hotel Management</title>
+    <title>The Breeze Inn - Booking</title>
 </head>
 
 <body>
     <!-- NAVBAR -->
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <a class="navbar-brand" href="index.html">Hotel Name</a>
+            <a class="navbar-brand" href="index.html">
+                <img src="/src/images/logo.png" width="70" height="50" alt="">
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -33,6 +35,7 @@
     </div>
 
     <!-- BOOKING -->
+    <img id="booking-image" src="/src/images/booking.jpg">
     <div class="container booking">
         <div class="row">
             <div class="col-md-6">
@@ -83,7 +86,8 @@
                     <button type="submit" class="btn btn-primary">Sign in</button>
                 </form>
             </div>
-            <div class="col-md-6">
+            <div class="vl"></div>
+            <div class="col-md-5">
                 <h3>Already staying in a room? Login here</h3>
                 <form>
                     <div class="form-group col-sm-12 col-md-6">
@@ -93,6 +97,7 @@
                     <div class="form-group col-sm-12 col-md-6">
                         <label for="inputPassword4">Password</label>
                         <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                        <button type="submit" class="btn btn-primary" style="margin-top: 15px;">Log in</button>
                     </div>
                 </form>
             </div>
