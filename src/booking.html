@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="/src/jquery.datetimepicker.min.css" rel="stylesheet">
     <title>The Breeze Inn - Booking</title>
 </head>
 
@@ -35,7 +36,36 @@
     </div>
 
     <!-- BOOKING -->
-    <div class="container">
+    <div class="container booking">
+        <h1>Find your room</h1>
+        <div class="container mt-5 mb-5" style="width:400px">
+            <h3>Date Picker</h3>
+            <input type="text" id="picker" class="form-control">
+        </div>
+        <form>
+            <div class="form-row align-items-center">
+                <div class="col-auto my-1">
+                    Number of Rooms:
+                    <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <option selected>select</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="col-auto my-1">
+                    Number of Guests:
+                    <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <option selected>select</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+            </div>
+        </form>
 
     </div>
 
@@ -67,6 +97,14 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="/src/jquery.datetimepicker.full.min.js"></script>
+    <script>
+        $('#picker').datetimepicker({
+            timepicker: false,
+            datepicker: true,
+            format: 'Y-m-d',
+        })
+    </script>
 </body>
 
 </html>
