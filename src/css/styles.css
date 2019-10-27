@@ -31,7 +31,9 @@ body {
 }
 
 /* ABOUT */
-
+#about {
+    padding: 5px;
+}
 #about h1 {
     text-transform: uppercase;
     text-shadow: 1px 1px 2px;
@@ -39,7 +41,11 @@ body {
 #about h3 {
     text-shadow: 0px 0px 1px;
 }
-
+#about a {
+    margin-top: 20px;
+    width: 180px;
+    margin-bottom: 10px;
+}
 
 /* FOOTER */
 .footerStyle {
