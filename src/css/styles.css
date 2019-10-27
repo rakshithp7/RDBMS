@@ -30,6 +30,17 @@ body {
     background-color: white;
 }
 
+/* ABOUT */
+
+#about h1 {
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px;
+}
+#about h3 {
+    text-shadow: 0px 0px 1px;
+}
+
+
 /* FOOTER */
 .footerStyle {
     background-color: #4a4a4a;
