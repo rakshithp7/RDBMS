@@ -42,28 +42,142 @@
         <h3 class="lead">Order food or check-out from here!</h3>
         <hr>
         <h1>Food items</h1>
-        <div class="row">
-            <div class="col-sm-12 col-md-4">
-                <ul>
-                    <li>
-                        one
-                    </li>
-                    <li>
-                        two
-                    </li>
-                    <li>
-                        three
-                    </li>
-                    <li>
-                        four
-                    </li>
-                    <li>
-                        five
-                    </li>
-                </ul>
+        <div class="accordion" id="foodItems">
+            <div class="card">
+                <div class="card-header" id="starters">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Starters
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#foodItems">
+                    <div class="card-body">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="starter1">
+                            <label class="custom-control-label" for="starter1">French Fries 106/-</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="starter2">
+                            <label class="custom-control-label" for="starter2">Garlic Bread 98/-</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="starter3">
+                            <label class="custom-control-label" for="starter3">Garlic Bread with Cheese
+                                119/-</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="starter4">
+                            <label class="custom-control-label" for="starter4">Chilli Cheese Toast 115/-</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="starter5">
+                            <label class="custom-control-label" for="starter5">Spring Roll 145/-</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="mainCourse">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Main Course
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#foodItems">
+                    <div class="card-body">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="maincourse1">
+                            <label class="custom-control-label" for="maincourse1">Veg Chopsouey 195/-</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="maincourse2">
+                            <label class="custom-control-label" for="maincourse2">Veg. Fried Rice 165/-</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="maincourse3">
+                            <label class="custom-control-label" for="maincourse3">Chilly Garlic Rice 165/-</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="maincourse4">
+                            <label class="custom-control-label" for="maincourse4">Thali Regular (Only Packing)
+                                196/-</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="maincourse5">
+                            <label class="custom-control-label" for="maincourse5">Thali Special 280/-</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="deserts">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Deserts
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#foodItems">
+                    <div class="card-body">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="desert1">
+                            <label class="custom-control-label" for="desert1">Gulab Jamun 60/-</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="desert2">
+                            <label class="custom-control-label" for="desert2">Hot Choclate Fudge 165/-</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="desert3">
+                            <label class="custom-control-label" for="desert3">Chocolate Almond Fudge 60/-</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="desert4">
+                            <label class="custom-control-label" for="desert4">Butter Scotch Ice Cream 60/-/label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="desert5">
+                            <label class="custom-control-label" for="desert5">Vanilla/Strawberry Ice Cream 51/-</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="beverages">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Beverages
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#foodItems">
+                    <div class="card-body">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="beverage1">
+                            <label class="custom-control-label" for="beverage1">Coffee Mocachino 51/-
+                            </label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="beverage2">
+                            <label class="custom-control-label" for="beverage2">Cola / Orange / Lemon 55/-</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="beverage3">
+                            <label class="custom-control-label" for="beverage3">Ice Tea (Lemon) 51/-</label>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <button type="button" class="btn btn-outline-primary">Place Order</button>
+        <button type="button" class="btn btn-outline-primary" style="margin-top: 15px;">Place Order</button>
         <hr>
         <h1>Check Out</h1>
         <!-- Button trigger modal -->
