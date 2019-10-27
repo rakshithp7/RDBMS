@@ -38,11 +38,13 @@
     </div>
 
     <!-- BOOKING -->
+    <img id="booking-image" src="/src/images/room.jpg">
     <div class="container booking">
         <h1>Find your room</h1>
         <form>
-            <div class="row">
+            <div class="form-row">
                 <div class="col-md-3">
+                    <label class="mr-sm-2" for="inlineFormCustomSelect">Check-in Date</label>
                     <div class="input-group">
                         <div class='input-group-prepend'>
                             <button type="button" id="toggle1" class="input-group-text">
@@ -53,6 +55,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
+                    <label class="mr-sm-2" for="inlineFormCustomSelect">Check-out Date</label>
                     <div class="input-group">
                         <div class='input-group-prepend'>
                             <button type="button" id="toggle2" class="input-group-text">
@@ -62,11 +65,20 @@
                         <input type='text' id='checkoutdate' class="form-control" />
                     </div>
                 </div>
+                <div class="col-md-3">
+                    <label class="mr-sm-2" for="inlineFormCustomSelect">Number of Rooms:</label>
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <option selected>select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
             </div>
             <div class="form-row align-items-center">
                 <div class="col-auto my-1">
-                    Number of Rooms:
-                    <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                    <label class="mr-sm-2" for="inlineFormCustomSelect">Number of Adults:</label>
                     <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                         <option selected>select</option>
                         <option value="1">1</option>
@@ -76,26 +88,17 @@
                     </select>
                 </div>
                 <div class="col-auto my-1">
-                    Number of Adults:
-                    <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                        <option selected>select</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                    </select>
-                </div>
-                <div class="col-auto my-1">
-                    Number of Children:
-                    <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                    <label class="mr-sm-2" for="inlineFormCustomSelect">Number of Children:</label>
                     <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                         <option selected>0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
+                        <option value="4">4</option>
                     </select>
                 </div>
             </div>
+            <button type="submit" class="btn btn-primary" style="margin-top: 15px;">Find Rooms!</button>
         </form>
     </div>
 
