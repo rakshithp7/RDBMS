@@ -9,6 +9,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <link href="/src/jquery.datetimepicker.min.css" rel="stylesheet">
     <title>The Breeze Inn - Booking</title>
@@ -38,35 +40,63 @@
     <!-- BOOKING -->
     <div class="container booking">
         <h1>Find your room</h1>
-        <div class="container mt-5 mb-5" style="width:400px">
-            <h3>Date Picker</h3>
-            <input type="text" id="picker" class="form-control">
-        </div>
         <form>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <div class='input-group-prepend'>
+                            <button type="button" id="toggle1" class="input-group-text">
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <input type='text' id='checkindate' class="form-control" />
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <div class='input-group-prepend'>
+                            <button type="button" id="toggle2" class="input-group-text">
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <input type='text' id='checkoutdate' class="form-control" />
+                    </div>
+                </div>
+            </div>
             <div class="form-row align-items-center">
                 <div class="col-auto my-1">
                     Number of Rooms:
                     <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
                     <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                         <option selected>select</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
                     </select>
                 </div>
                 <div class="col-auto my-1">
-                    Number of Guests:
+                    Number of Adults:
                     <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
                     <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                         <option selected>select</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                <div class="col-auto my-1">
+                    Number of Children:
+                    <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <option selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
                     </select>
                 </div>
             </div>
         </form>
-
     </div>
 
     <!-- FOOTER -->
@@ -99,10 +129,31 @@
         crossorigin="anonymous"></script>
     <script src="/src/jquery.datetimepicker.full.min.js"></script>
     <script>
-        $('#picker').datetimepicker({
+        $('#checkindate').datetimepicker({
             timepicker: false,
             datepicker: true,
             format: 'Y-m-d',
+            onShow: function (ct) {
+                this.setOptions({
+                    maxDate: $('#checkoutdate').val() ? $('#checkoutdate').val() : false
+                })
+            }
+        })
+        $('#checkoutdate').datetimepicker({
+            timepicker: false,
+            datepicker: true,
+            format: 'Y-m-d',
+            onShow: function (ct) {
+                this.setOptions({
+                    minDate: $('#checkindate').val() ? $('#checkindate').val() : false
+                })
+            }
+        })
+        $('#toggle1').on('click', function () {
+            $('#checkindate').datetimepicker('toggle')
+        })
+        $('#toggle2').on('click', function () {
+            $('#checkoutdate').datetimepicker('toggle')
         })
     </script>
 </body>
