@@ -65,6 +65,10 @@ body {
 }
 
 /* INDEX */
+#roomsWeOffer h1 {
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px;
+}
 #roomType {
     margin: 50px;
 }
